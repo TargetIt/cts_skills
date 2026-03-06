@@ -47,17 +47,17 @@ namespace              // Anonymous namespace for implementation details
 
 Module namespace names use lowercase with underscores for multi-word names:
 
-| Module | Namespace |
-|--------|-----------|
-| `compute` | `vkt::compute` |
-| `api` | `vkt::api` |
-| `ray_tracing` | `vkt::RayTracing` |
-| `mesh_shader` | `vkt::MeshShader` |
-| `fragment_ops` | `vkt::FragmentOps` |
-| `sparse_resources` | `vkt::sparse` |
-| `dynamic_state` | `vkt::DynamicState` |
+| Module | Namespace | Style |
+|--------|-----------|-------|
+| `compute` | `vkt::compute` | lowercase (preferred) |
+| `api` | `vkt::api` | lowercase (preferred) |
+| `ray_tracing` | `vkt::RayTracing` | PascalCase (legacy) |
+| `mesh_shader` | `vkt::MeshShader` | PascalCase (legacy) |
+| `fragment_ops` | `vkt::FragmentOps` | PascalCase (legacy) |
+| `sparse_resources` | `vkt::sparse` | abbreviated (legacy) |
+| `dynamic_state` | `vkt::DynamicState` | PascalCase (legacy) |
 
-Note: Namespace naming varies somewhat across modules. For new modules, prefer lowercase with underscores (e.g., `vkt::my_feature`).
+Note: Namespace naming varies across modules due to historical evolution. For new modules, prefer lowercase with underscores (e.g., `vkt::my_feature`) to match the directory name.
 
 ## 3. Class Naming
 

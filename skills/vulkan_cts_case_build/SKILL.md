@@ -1,6 +1,6 @@
 ---
 name: vulkan_cts_case_build
-description: Create Vulkan CTS (Conformance Test Suite) test cases following the VK-GL-CTS project conventions. Use this skill whenever someone wants to create a new Vulkan CTS test case, add a new test module, write Vulkan conformance tests, add tests to an existing VK-GL-CTS module, or work with the dEQP Vulkan testing framework. Also use when the user mentions CTS, deqp-vk, Vulkan conformance testing, VK-GL-CTS, or wants to test Vulkan API features like compute shaders, rendering, synchronization, memory, etc.
+description: Create Vulkan CTS (Conformance Test Suite) test cases following VK-GL-CTS project conventions. Use whenever the user wants to create, add, or modify Vulkan CTS test cases, test modules, or conformance tests. Triggers on mentions of CTS, deqp-vk, VK-GL-CTS, Vulkan conformance, or testing Vulkan API features (compute, rendering, synchronization, memory, ray tracing, etc.).
 ---
 
 # Vulkan CTS Case Build
