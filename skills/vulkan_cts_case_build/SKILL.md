@@ -16,6 +16,12 @@ The Vulkan CTS is part of the [VK-GL-CTS](https://github.com/KhronosGroup/VK-GL-
 - Creating a new test module for a Vulkan feature area
 - Writing compute, graphics, or API-level conformance tests
 
+## When Not to Use
+
+- Non-Vulkan test development (for example OpenGL CTS or non-CTS projects)
+- General Vulkan application development that is not part of VK-GL-CTS
+- CI/build pipeline setup tasks unrelated to adding or modifying test cases
+
 ## Quick Start: Creating a Test Case
 
 Follow these steps to create a new Vulkan CTS test case. Read `references/test_case_patterns.md` for detailed code examples and `references/cmake_integration.md` for build system integration.
@@ -52,7 +58,7 @@ Every test case follows this lifecycle:
 
 1. **`checkSupport(Context&)`** — Verify device capabilities and extensions. Call `context.requireDeviceFunctionality("VK_EXT_something")` or check feature flags. Throw `tcu::NotSupportedError` if unsupported.
 
-2. **`initPrograms(vk::SourceCollections&)`** — Add shader source code (GLSL or SPIR-V). This runs at build time so shaders can be precompiled.
+2. **`initPrograms(vk::SourceCollections&)`** — Add shader source code (GLSL or SPIR-V). This runs during the test framework's program setup stage before test execution.
 
 3. **`createInstance(Context&)` / `iterate()`** — The actual test logic. Create Vulkan resources, record command buffers, submit work, and validate results. Return `tcu::TestStatus::pass()` or `tcu::TestStatus::fail()`.
 
